@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+// Default Variables
+
+$slick-arrow-color: rgba(255, 255, 255, 0.5) !default;
+$slick-arrow-color-hover: rgba(255, 255, 255, 0.5) !default;
+$slick-arrow-color-disabled: rgba(255, 255, 255, 0.2) !default;
+$slick-background-color: rgba(0, 0, 0, 0.05) !default;
+$slick-background-color-hover: rgba(0, 0, 0, 0.2) !default;
+$slick-background-color-disabled: rgba(0, 0, 0, 0.02) !default;
+$slick-dot-color: rgba(0, 0, 0, 0.05) !default;
+$slick-dot-color-active: rgba(0, 0, 0, 0.2) !default;
+
+/* Slider */
+
+/*.slick-list {
+  .slick-loading & {
+    background: #fff url("ajax-loader.gif") center center no-repeat;
+  }
+}*/
+
+.slick-slide {
+  outline: none !important;
+  &:focus, a {
+    outline: none;
+  }
+}
+
+/* Arrows */
+
+.slick-prev,
+.slick-next {
+  z-index: 1;
+  display: block;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  color: $slick-arrow-color;
+  background: $slick-background-color;
+  padding: 0.25rem 0.5rem;
+  border: none;
+  outline: none;
+
+  -webkit-border-radius: rem-calc(5);
+  -moz-border-radius: rem-calc(5);
+  border-radius: rem-calc(5);
+
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+
+  &:hover, &:focus {
+    outline: none;
+    color: $slick-arrow-color-hover;
+    background: $slick-background-color-hover;
+  }
+
+  &.slick-disabled {
+    color: $slick-arrow-color-disabled;
+    background: $slick-background-color-disabled;
+  }
+}
+
+.slick-prev {
+  left: 1rem;
+  [dir="rtl"] & {
+    left: auto;
+    right: 1rem;
+  }
+}
+
+.slick-next {
+  right: 1rem;
+  [dir="rtl"] & {
+    left: 1rem;
+    right: auto;
+  }
+}
+
+@media #{$small-only} {
+  .slick-prev, .slick-next {
+    display: none !important;
+  }
+}
+
+/* Dots */
+
+.slick-dots {
+  margin: 2rem 0;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0;
+  width: 100%;
+  li {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    button {
+      border: 0;
+      background: $slick-dot-color;
+      display: block;
+      height: rem-calc(10);
+      width: rem-calc(10);
+      outline: none;
+      line-height: 0;
+      font-size: 0;
+      margin: 1rem;
+      padding: 0;
+
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      &:hover, &:focus {
+        outline: none;
+      }
+    }
+    &.slick-active button {
+      background: $slick-dot-color-active;
+    }
+  }
+}

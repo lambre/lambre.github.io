@@ -1,0 +1,23 @@
+.cat {
+    list-style-type: none;
+margin-bottom: rem-calc(0);
+    &__item {
+        display: inline-block;
+        margin-right: rem-calc(21);
+    }
+
+    &__link {
+        text-transform: uppercase;
+        font-size: rem-calc(14);
+        display: inline-block;
+        padding-top: rem-calc(16);
+        padding-bottom: rem-calc(16);
+    }
+      @include breakpoint(medium down) {
+        margin-top: rem-calc(8);
+        margin-bottom: rem-calc(8);
+      &__link {
+        padding-top: rem-calc(8);
+        padding-bottom: rem-calc(8);
+      } }
+}

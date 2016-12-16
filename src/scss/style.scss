@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+// Все картинки и шрифты необходимо подключать с использованием этих двух переменных:
+$imagesPath: '../images' !default;
+$fontsPath: '../fonts' !default;
+
+$fa-font-path: $fontsPath;
+
+@import "settings";
+@import "external";
+
+@import "fonts";
+@import "common";
+@import "slick/slick-theme";
+
+
+@import "footer";
+@import "header";
+@import "sticky-footer";
+@import "cat";

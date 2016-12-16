@@ -1,0 +1,10 @@
+# common, PHPStorm, WebStorm
+.DS_Store
+.idea/*
+Thumbs.db
+
+#project
+bower_components
+node_modules
+npm-debug.log
+dist

@@ -1,0 +1,12 @@
+header.header
+  .row
+    .large-2.medium-3.columns
+      a(href="#")
+        .header__logo
+          img(src="./images/logo.png",alt="Lambre")
+    .large-22.medium-21.columns
+      -var partners = [{'a':'#','t':'Женская парфюмерия'},{'a':'#','t':'Мужская парфюмерия'},{'a':'#','t':'Уход за кожей'},{'a':'#','t':'Макияж'},{'a':'#','t':'Украшения'},{'a':'#','t':'Аксессуары'}]
+      ul.cat.text-center.medium-text-left
+        each part in partners
+          li.cat__item
+            a.cat__link(href=part.a)= part.t

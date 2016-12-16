@@ -1,0 +1,11 @@
+include ../mixins/_mixin-desc
+head
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    block seo
+      title Ламбре - французская парфюмерия и косметика
+      +desc('На нашем сайте вы можете заказать элитную французскую парфюмерию и косметику Ламбре в Донецкой области')
+    link(rel='stylesheet', href='css/style.css')
+    script(type='text/javascript')
+        include:uglify-js ../../../../node_modules/npm-modernizr/modernizr.js

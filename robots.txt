@@ -1,0 +1,8 @@
+Host: https://lambre.github.io/
+
+
+User-agent: *
+Disallow: /src
+###Sitemap: https://www.avito.ru/sitemap/index.xml
+
+

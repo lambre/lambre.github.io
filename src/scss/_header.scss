@@ -1,0 +1,16 @@
+.header {
+    background: #fff;
+
+    &__logo {
+        background: #000;
+
+        padding-left: rem-calc(10);
+        padding-right: rem-calc(10);
+        display: inline-block;
+        padding-top: rem-calc(5);
+        padding-bottom: rem-calc(5);
+         img {
+           max-height: rem-calc(40);
+         }
+    }
+}
