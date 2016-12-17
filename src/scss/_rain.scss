@@ -1,0 +1,53 @@
+.rain {
+    list-style: none;
+    padding: 0;
+    margin-left: rem-calc(0);
+
+    li {
+        padding: 7px 20px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border-left: 10px solid #f05d22;
+        box-shadow: 2px -2px 5px 0 rgba(0,0,0,.1), -2px -2px 5px 0 rgba(0,0,0,.1), 2px 2px 5px 0 rgba(0,0,0,.1), -2px 2px 5px 0 rgba(0,0,0,.1);
+        font-size: 20px;
+        letter-spacing: 2px;
+        transition: 0.3s all linear;
+
+        &:nth-child(2n) {
+            border-color: #8bc63e;
+
+            &:hover {
+                border-right: 10px solid #8bc63e;
+            }
+        }
+
+        &:nth-child(3n) {
+            border-color: #fcba30;
+
+            &:hover {
+                border-right: 10px solid #fcba30;
+            }
+        }
+
+        &:nth-child(4n) {
+            border-color: #1ccfc9;
+
+            &:hover {
+                border-right: 10px solid #1ccfc9;
+            }
+        }
+
+        &:nth-child(5n) {
+            border-color: #493224;
+
+            &:hover {
+                border-right: 10px solid #493224;
+            }
+        }
+
+        &:hover {
+            border-left: 10px solid transparent;
+            border-right: 10px solid #f05d22;
+        }
+    }
+}

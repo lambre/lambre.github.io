@@ -1,8 +1,9 @@
-;$(document).foundation();
+;
+$(document).foundation();
 
-(function ($) {
+(function($) {
     "use strict";
-    $(function () {
+    $(function() {
 
         /**
          * Разные карусели
@@ -21,6 +22,10 @@
             swipeToSlide: true,
             prevArrow: '<i class="slick-prev fa fa-angle-left fa-3x"> </i>',
             nextArrow: '<i class="slick-next fa fa-angle-right fa-3x"> </i>'
+        });
+
+        $(document).ready(function() {
+            $(".fancybox").fancybox();
         });
 
     });

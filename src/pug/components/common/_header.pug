@@ -5,8 +5,18 @@ header.header
         .header__logo
           img(src="./images/logo.png",alt="Lambre")
     .large-22.medium-21.columns
-      -var partners = [{'a':'#','t':'Женская парфюмерия'},{'a':'#','t':'Мужская парфюмерия'},{'a':'#','t':'Уход за кожей'},{'a':'#','t':'Макияж'},{'a':'#','t':'Украшения'},{'a':'#','t':'Аксессуары'}]
       ul.cat.text-center.medium-text-left
-        each part in partners
-          li.cat__item
-            a.cat__link(href=part.a)= part.t
+        li.cat__item
+          a.cat__link(href="#") Женская парфюмерия
+        li.cat__item
+          a.cat__link(href="#") Мужская парфюмерия
+        li.cat__item
+          a.cat__link(href="#") Уход за кожей
+        li.cat__item
+          a.cat__link(href="#") Макияж
+        li.cat__item
+          a.cat__link(href="#") Украшения
+        li.cat__item
+          a.cat__link(href="#") Аксессуары
+        li.cat__item
+          a.cat__link(href="tel:+380504225695") +38 050-422-56-95

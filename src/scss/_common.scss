@@ -1,1 +1,40 @@
-body {background-color: #e7e7e2}
+body {
+    background-color: #e7e7e2;
+}
+
+h1 {
+    font-size: rem-calc(44);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+ol {
+    margin-left: rem-calc(44);
+    margin-top: rem-calc(0);
+    counter-reset: myCounter;
+
+    li {
+        list-style: none;
+        position: relative;
+        margin-bottom: rem-calc(18);
+
+        &:before {
+            counter-increment: myCounter;
+            content: counter(myCounter);
+            position: absolute;
+            display: inline-block;
+            margin-left: rem-calc(-44);
+            margin-right: rem-calc(12);
+            text-align: center;
+            color: #199419;
+            font-weight: 700;
+            font-size: rem-calc(15);
+            line-height: 30px;
+            top: rem-calc(-6);
+            border: 1px solid #e6e6e6;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+        }
+    }
+}

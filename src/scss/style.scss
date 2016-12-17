@@ -5,6 +5,7 @@ $imagesPath: '../images' !default;
 $fontsPath: '../fonts' !default;
 
 $fa-font-path: $fontsPath;
+$red: #ff0052;
 
 @import "settings";
 @import "external";
@@ -12,9 +13,12 @@ $fa-font-path: $fontsPath;
 @import "fonts";
 @import "common";
 @import "slick/slick-theme";
-
+@import "fancybox";
 
 @import "footer";
 @import "header";
 @import "sticky-footer";
 @import "cat";
+@import "area";
+@import "rank";
+@import "rain";

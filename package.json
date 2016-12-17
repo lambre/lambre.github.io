@@ -12,6 +12,7 @@
   "private": true,
   "dependencies": {
     "browser-sync": "^2.18.2",
+    "fancybox": "^3.0.0",
     "font-awesome": "~4.7.0",
     "foundation-sites": "~6.2.4",
     "gulp": "^3.9.1",

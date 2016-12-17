@@ -1,0 +1,9 @@
+.rank {
+    border-bottom: rem-calc(2) solid $red;
+    text-transform: uppercase;
+    font-size: rem-calc(11);
+    &:hover {
+      border-bottom-color: $secondary-color;
+    }
+    
+}
