@@ -44,7 +44,7 @@
 // ---------
 
 $global-font-size: 14px;
-$global-width: rem-calc(1384);
+$global-width: rem-calc(1284);
 $global-lineheight: 1.5;
 $primary-color: $red;
 $secondary-color: #8e2b88;
@@ -105,7 +105,7 @@ $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-sizes: (
   small: (
-    'h1': 35,
+    'h1': 32,
     'h2': 26,
     'h3': 20,
     'h4': 18,
@@ -113,7 +113,7 @@ $header-sizes: (
     'h6': 14,
   ),
   medium: (
-    'h1': 32,
+    'h1': 44,
     'h2': 24,
     'h3': 20,
     'h4': 18,

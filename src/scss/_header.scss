@@ -1,16 +1,17 @@
 .header {
     background: #fff;
-margin-bottom: rem-calc(30);
-    &__logo {
-        background: #000;
+    margin-bottom: rem-calc(30);
 
+    &__logo {
+        background: $red;
         padding-left: rem-calc(10);
         padding-right: rem-calc(10);
         display: inline-block;
         padding-top: rem-calc(5);
         padding-bottom: rem-calc(5);
-         img {
-           max-height: rem-calc(40);
-         }
+
+        img {
+            max-height: rem-calc(40);
+        }
     }
 }

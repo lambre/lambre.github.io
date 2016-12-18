@@ -1,11 +1,10 @@
 doctype html
 html.no-js(lang='ru')
+    include components/common/_variables
     include components/service/_head
     body
-        include components/common/_variables
         include components/common/_header
         block content
           include components/common/_content
-
         include components/common/_footer
         include components/service/_js.html
