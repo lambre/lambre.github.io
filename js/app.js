@@ -24,9 +24,9 @@ $(document).foundation();
             nextArrow: '<i class="slick-next fa fa-angle-right fa-3x"> </i>'
         });
 
-        $(document).ready(function() {
-            $(".fancybox").fancybox();
-        });
+        // $(document).ready(function() {
+        //     $(".fancybox").fancybox();
+        // });
 
     });
 })(jQuery);

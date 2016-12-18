@@ -1,14 +1,30 @@
 .header {
     background: #fff;
     margin-bottom: rem-calc(30);
+    padding-top: rem-calc(10);
+    position: relative;
+
+    &__phone {
+        padding-bottom: rem-calc(5);
+        display: block;
+    }
+
+    &__toggle {
+        position: absolute;
+        left: rem-calc(16);
+        top: rem-calc(7);
+    }
 
     &__logo {
-        background: $red;
-        padding-left: rem-calc(10);
         padding-right: rem-calc(10);
+        background: $red;
+        border-radius: rem-calc(8);
+        padding-left: rem-calc(10);
+        margin-right: rem-calc(10);
         display: inline-block;
         padding-top: rem-calc(5);
         padding-bottom: rem-calc(5);
+        margin-bottom: rem-calc(5);
 
         img {
             max-height: rem-calc(40);
