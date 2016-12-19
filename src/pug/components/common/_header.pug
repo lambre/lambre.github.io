@@ -1,27 +1,15 @@
 header.header
   .row
-    .large-5.medium-6.small-22.small-offset-2.medium-offset-0.columns.text-right.medium-text-left
+    .large-5.medium-7.small-22.small-offset-2.medium-offset-0.columns.text-right.medium-text-left
       a(href="./")
         .header__logo.hide-for-small-only
           img(src="./images/logo.png",alt="Lambre")
       a.header__phone(href="tel:+380504225695")
-        i.fa.fa-phone-square
+        i.fa.fa-phone-square.fa-lg
         |&nbsp;
         |+38 050-422-56-95
-    .large-19.medium-18.columns
+    .large-19.medium-17.columns
       span.header__toggle(data-responsive-toggle='responsive-menu', data-hide-for='medium')
         button.menu-icon.dark(type='button', data-toggle='')
-
-      ul.cat.text-center.medium-text-left#responsive-menu
-        li.cat__item
-          a.cat__link(href="#") Женская парфюмерия
-        li.cat__item
-          a.cat__link(href="#") Мужская парфюмерия
-        li.cat__item
-          a.cat__link(href="#") Уход за кожей
-        li.cat__item
-          a.cat__link(href="#") Макияж
-        li.cat__item
-          a.cat__link(href="#") Украшения
-        li.cat__item
-          a.cat__link(href="#") Аксессуары
+      #responsive-menu
+        include _cat

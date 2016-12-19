@@ -1,25 +1,59 @@
 .cat {
     list-style-type: none;
-    margin-bottom: rem-calc(0);
+    margin-bottom: rem-calc(10);
+    margin-top: rem-calc(18);
+    float: left;
+    margin-left: rem-calc(0);
+    width: 100%;
 
     &__item {
-        display: inline-block;
-        margin-right: rem-calc(21);
+        float: left;
+        border-right: 1px solid #5d5d5d;
+        border-left: 1px solid #929292;
+        border-bottom: 1px solid #575757;
+        border-top: 1px solid #797979;
+        background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #787878), color-stop(0.5, #5E5E5E), color-stop(0.51, #707070), color-stop(1, #838383));
+        background-color: #5f5f5f;
+
+        &:hover {
+            background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #3F3F3F), color-stop(0.5, #383838), color-stop(0.51, #434343), color-stop(1, #555555));
+            background-color: #383838;
+            -webkit-box-shadow: inset 0 0 5px 5px #535353;
+            box-shadow: inset 0 0 5px 5px #535353;
+        }
+
+        &:active {
+            background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #3F3F3F), color-stop(0.5, #383838), color-stop(0.51, #434343), color-stop(1, #555555));
+            background-color: #383838;
+            -webkit-box-shadow: inset 0 1px 2px 2px #000;
+            box-shadow: inset 0 1px 2px 2px #000;
+        }
     }
 
     &__link {
-        text-transform: uppercase;
         font-size: rem-calc(14);
-        display: inline-block;
-        padding-top: rem-calc(16);
-        padding-bottom: rem-calc(16);
-    }
-    @media (max-width: 1400px) {
-        margin-bottom: rem-calc(8);
+        padding: rem-calc(8) rem-calc(15);
+        color: white;
+        text-decoration: none;
+        display: block;
+        outline: none;
 
-        &__link {
-            padding-top: rem-calc(8);
-            padding-bottom: rem-calc(8);
+        &:hover {
+            color: #fff;
+        }
+
+        &:focus {
+            color: $red;
+        }
+    }
+    @media (max-width: 1130px) {
+        margin-top: rem-calc(0);
+    }
+    @include breakpoint(small only) {
+        margin-top: rem-calc(15);
+        margin-bottom: rem-calc(15);
+        &__item {
+          width: 100%;
         }
     }
 }
