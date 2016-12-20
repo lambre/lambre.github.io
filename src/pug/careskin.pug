@@ -1,0 +1,11 @@
+extends index
+block content
+  .row.large-up-3.medium-up-2.small-up-1
+    each obj in careskin
+      .columns
+        .novel
+          a(href="./"+ obj["a"] + '.html')
+            .novel__img.text-center
+              img(src="./i/450/"+ obj["img"], alt=obj["t"])
+            .novel__info.text-center.large-text-left
+              p.novel__title= obj["t"]

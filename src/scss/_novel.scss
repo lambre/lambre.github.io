@@ -1,0 +1,22 @@
+.novel {
+  &:hover {
+    .novel__title {
+      color: $red;
+    }
+    .novel__img {
+      box-shadow: 0 0 30px #000;
+    }
+  }
+    &__img {
+        margin-bottom: rem-calc(10);
+        background: #fff;
+      box-shadow: 0 0 30px #585858;
+    }
+
+    &__title {
+        font-size: rem-calc(24);
+        font-weight: 600;
+        color: #000;
+    }
+
+}
