@@ -63,9 +63,7 @@ gulp.task('clean-images', function() {
     return gulp.src(path.dist.images, {read: false}).pipe(rimraf());
 });
 
-gulp.task('clean-i', function() {
-    return gulp.src(path.dist.i, {read: false}).pipe(rimraf());
-});
+
 
 gulp.task('clean-fonts', function() {
     return gulp.src(path.dist.fonts, {read: false}).pipe(rimraf());
@@ -132,13 +130,7 @@ gulp.task('images', ['clean-images'], function () {
         }));
 });
 
-gulp.task('i', ['clean-i'], function() {
-    return gulp.src(path.src.i)
-        .pipe(gulp.dest(path.dist.i))
-        .pipe(browserSync.reload({ 
-         stream: true
-        }));
-});
+
 
 gulp.task('fonts', ['clean-fonts'], function() {
     return gulp.src([path.src.fonts, path.src.awesome])
@@ -176,13 +168,12 @@ gulp.task('js-minify', ['clean-js', 'pug'], function () {
 
 
 
-gulp.task('minify', ['sass', 'pug', 'images', 'i', 'fonts', 'js-html', 'js-minify', 'clean-js-minify']);
+gulp.task('minify', ['sass', 'pug', 'images', 'fonts', 'js-html', 'js-minify', 'clean-js-minify']);
 
-gulp.task('default', ['browserSync','sass', 'pug', 'images', 'i', 'fonts', 'js-html', 'js-copy', 'clean-js-copy'], function () {
+gulp.task('default', ['browserSync','sass', 'pug', 'images', 'fonts', 'js-html', 'js-copy', 'clean-js-copy'], function () {
     gulp.watch([path.watch.css], ['sass']);
     gulp.watch([path.watch.html], ['pug2']);
     gulp.watch([path.watch.images], ['images']);
-    gulp.watch([path.watch.i], ['i']);
     gulp.watch([path.watch.fonts], ['fonts']);
     gulp.watch([path.watch.jsHtml], ['js-html']);
     gulp.watch([path.watch.js], ['js-copy', 'clean-js-copy']);

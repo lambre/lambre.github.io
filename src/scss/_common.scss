@@ -1,14 +1,12 @@
 body {
-
     background: #f2f2f2;
 }
-
 
 .responsive-embed {
     margin-bottom: rem-calc(9);
 }
 
-.menu-icon.dark {
+.menu-icon {
     position: relative;
     display: inline-block;
     vertical-align: middle;
@@ -24,9 +22,9 @@ body {
         display: block;
         width: 100%;
         height: rem-calc(2);
-        background: #0a0a0a;
-        -webkit-box-shadow: 0 7px 0 #0a0a0a, 0 14px 0 #0a0a0a;
-        box-shadow: 0 7px 0 #0a0a0a, 0 14px 0 #0a0a0a;
+        background: #fff;
+        -webkit-box-shadow: 0 7px 0 #fff, 0 14px 0 #fff;
+        box-shadow: 0 7px 0 #fff, 0 14px 0 #fff;
         content: '';
     }
 }
@@ -38,6 +36,7 @@ h1 {
     margin: rem-calc(0);
     padding: 0 0 6px;
     letter-spacing: rem-calc(-1.5);
+
 }
 
 h2 {

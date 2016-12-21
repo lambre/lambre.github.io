@@ -1,0 +1,9 @@
+extends regular
+block seo
+  title= accessoires[0]["t"]
+  +desc('Набор кистей от Lambre')
+block inside
+  p
+    a(href="./accessoires.html").rank= accessoires[0]["cat"]
+  h1= accessoires[0]["t"]
+  h2 Набор из 6 кистей для макияжа в футляре

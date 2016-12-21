@@ -1,18 +1,21 @@
 .header {
-    background: url(../images/back.jpg)no-repeat;
+    background: url(../images/back.jpg)no-repeat center top;
     margin-bottom: rem-calc(30);
     padding-top: rem-calc(10);
     position: relative;
 
     &__phone {
-        padding-bottom: rem-calc(5);
+        padding-bottom: rem-calc(10);
         display: block;
+        &:hover {
+          color: #fff;
+        }
     }
 
     &__toggle {
         position: absolute;
         left: rem-calc(16);
-        top: rem-calc(7);
+        top: rem-calc(9);
     }
 
     &__logo {
