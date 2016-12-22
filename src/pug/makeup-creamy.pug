@@ -1,0 +1,16 @@
+extends regular
+block seo
+  title= makeup[7]["t"]
+  +desc('КРЕМООБРАЗНЫЕ ЖИДКИЕ ТЕНИ ИСКЛЮЧИТЕЛЬНОЙ КОНСИСТЕНЦИИ 3,5 г с совершенным однородным цветом')
+block inside
+  p
+    a(href="./makeup.html").rank= makeup[7]["cat"]
+  h1= makeup[7]["t"]
+  h2 Creamy Eye Colors
+  p.text-center
+    img(src="./i/"+ makeup[7]["img"], alt=makeup[7]["t"])
+  p УНИКАЛЬНОЕ СОЧЕТАНИЕ ТРАДИЦИЙ И СОВРЕМЕННОСТИ
+  p
+    ul.rain
+      each title in ['комфортное нанесение;','совершенный однородный цвет;','легкая кремовая консистенция;']
+        li= title
