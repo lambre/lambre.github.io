@@ -1,0 +1,23 @@
+extends regular
+block seo
+  title= man[6]["t"]
+  +desc(man[6]["desc"])
+  meta(property='og:title', content=man[6]["t"])
+  meta(property='og:description', content=man[6]["desc"])
+  meta(property='og:image', content=siteRoot + 'i/450/'+ man[6]["img"])
+  meta(property='og:url', content=siteRoot + man[6]["a"] + '.html')
+block inside
+  p
+    a(href="./"+ link4 + ".html").rank= man[6]["cat"]
+  h1(itemprop="name")= man[6]["t"]
+  p.text-center
+    img(itemprop="image",src="./i/"+ man[6]["img"], alt=man[6]["t"])
+  p(itemprop="description") Что случится, если соединить пряную корицу с выразительным анисом? Неординарная композиция, как неординарен и Он – современный, уверенный в своём обаянии, галантный мужчина. Впрочем, за его зрелой сдержанностью скрывается озорной мальчишка, готовый к новым приключениям. Флердоранж слегка подслащает атмосферу, чтобы тут же очаровать успокаивающим благоуханием лаванды Прованса.
+  p Отдых в Сен-Тропе? Только с Ним!
+  h2.text-center СЕМЕЙСТВО АРОМАТОВ: ФУЖЕРЫ.
+  p
+    ul.rain
+      each title in ['Начальные ноты: бергамот, корица, анис.','Ноты «сердца»: флердоранж, кокосовое молоко и интенсивная лаванда.','Конечные ноты: сандаловое дерево, ваниль и бобы тонка.']
+        li= title
+  p.text-center
+    img(src="./i/saint.png", alt=man[6]["t"])

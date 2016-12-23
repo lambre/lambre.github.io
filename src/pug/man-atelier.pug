@@ -1,0 +1,16 @@
+extends regular
+block seo
+  title= man[8]["t"]
+  +desc(man[8]["desc"])
+  meta(property='og:title', content=man[8]["t"])
+  meta(property='og:description', content=man[8]["desc"])
+  meta(property='og:image', content=siteRoot + 'i/450/'+ man[8]["img"])
+  meta(property='og:url', content=siteRoot + man[8]["a"] + '.html')
+block inside
+  p
+    a(href="./"+ link4 + ".html").rank= man[8]["cat"]
+  h1(itemprop="name")= man[8]["t"]
+  p.text-center
+    img(itemprop="image",src="./i/"+ man[8]["img"], alt=man[8]["t"])
+  p.text-center
+    img(src="./i/atelier.png", alt=man[8]["t"])

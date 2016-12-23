@@ -1,0 +1,21 @@
+extends regular
+block seo
+  title= man[9]["t"]
+  +desc(man[9]["desc"])
+  meta(property='og:title', content=man[9]["t"])
+  meta(property='og:description', content=man[9]["desc"])
+  meta(property='og:image', content=siteRoot + 'i/450/'+ man[9]["img"])
+  meta(property='og:url', content=siteRoot + man[9]["a"] + '.html')
+block inside
+  p
+    a(href="./"+ link4 + ".html").rank= man[9]["cat"]
+  h1(itemprop="name")= man[9]["t"]
+  p.text-center
+    img(itemprop="image",src="./i/"+ man[9]["img"], alt=man[9]["t"])
+  p(itemprop="description") Новая мужская композиция перенесет Вас на райский берег океана. Аромат раскрывается необычайным сочетанием вкуснейшего ананаса, лимона и дольки сочной дыни. Обольстительные ноты лаванды, мяты и герани подчеркивают интенсивность и чувственность нот «сердца». Кульминацией композиции является сочетание диптерикса душистого и кедра, которые придают аромату неповторимый соблазнительный мужской тон.
+  p PARADIS MEN необычайно освежает и открывает новые горизонты, которые наполняют энергией и желанием к новым приключениям.
+  h2.text-center СЕМЕЙСТВО АРОМАТОВ: ЦИТРУСОВО - ФРУКТОВЫЕ
+  p
+    ul.rain
+      each title in ['Начальные ноты: лимон, дыня, ананас','Ноты "серда": лаванда, мята, герань','Конечные ноты: диптерикс душистый, кедр']
+        li= title
