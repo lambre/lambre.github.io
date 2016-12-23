@@ -1,0 +1,20 @@
+extends regular
+block seo
+  title= makeup[7]["t"]
+  +desc(makeup[7]["desc"])
+  meta(property='og:title', content=makeup[7]["t"])
+  meta(property='og:description', content=makeup[7]["desc"])
+  meta(property='og:image', content='https://lambre.github.io/i/450/'+ makeup[7]["img"])
+  meta(property='og:url', content='https://lambre.github.io/'+ makeup[7]["a"] + '.html')
+block inside
+  p
+    a(href="./makeup.html").rank= makeup[7]["cat"]
+  h1(itemprop="name")= makeup[7]["t"]
+  h2 Creamy Eye Colors
+  p.text-center
+    img(itemprop="image",src="./i/"+ makeup[7]["img"], alt=makeup[7]["t"])
+  p(itemprop="description") УНИКАЛЬНОЕ СОЧЕТАНИЕ ТРАДИЦИЙ И СОВРЕМЕННОСТИ
+  p
+    ul.rain
+      each title in ['комфортное нанесение;','совершенный однородный цвет;','легкая кремовая консистенция;']
+        li= title
