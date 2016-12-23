@@ -1,7 +1,10 @@
 extends regular
 block seo
   title= makeup[7]["t"]
-  +desc('КРЕМООБРАЗНЫЕ ЖИДКИЕ ТЕНИ ИСКЛЮЧИТЕЛЬНОЙ КОНСИСТЕНЦИИ 3,5 г с совершенным однородным цветом')
+  +desc(makeup[7]["desc"])
+  meta(property='og:title', content=makeup[7]["t"])
+  meta(property='og:description', content=makeup[7]["desc"])
+  meta(property='og:image', content='https://lambre.github.io/i/450/'+ makeup[7]["img"])
 block inside
   p
     a(href="./makeup.html").rank= makeup[7]["cat"]
