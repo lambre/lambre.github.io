@@ -1,0 +1,22 @@
+extends regular
+block seo
+  title= man[1]["t"]
+  +desc(man[1]["desc"])
+  meta(property='og:title', content=man[1]["t"])
+  meta(property='og:description', content=man[1]["desc"])
+  meta(property='og:image', content=siteRoot + 'i/450/'+ man[1]["img"])
+  meta(property='og:url', content=siteRoot + man[1]["a"] + '.html')
+block inside
+  p
+    a(href="./"+ link4 + ".html").rank= man[1]["cat"]
+  h1(itemprop="name")= man[1]["t"]
+  p.text-center
+    img(itemprop="image",src="./i/"+ man[1]["img"], alt=man[1]["t"])
+  p(itemprop="description") Свежесть цитрусов, подчеркнутая дерзостью кардамона в начальных нотах, раскрываясь, преобразуется в прохладное дыхание фиалки - мужского цветка, часто украшающего лацкан фрака. Тонко вплетенные в ткань аромата чарующие оттенки ликера пронизывают его звучание до последнего аккорда, изменяя тембр от безоглядной дерзости до чувственных переливов миндальной бархатной амбры.
+  h2.text-center СЕМЕЙСТВО АРОМАТОВ: ДРЕВЕСНЫЕ С НОТАМИ КОЖИ И ТАБАКА.
+  p
+    ul.rain
+      each title in ['Начальные ноты: свежий фруктовый фреш, кардамон, лимон, бергамот, нероли бигарад.','Ноты «сердца»: лаванда, пармская фиалка, боярышник, индийский сантал, кашемир, амаретто.','Конечные ноты: бобы тонка, табак Эрли, замша, красный кедр, ветивер, амбра.']
+        li= title
+  p.text-center
+    img(src="./i/winter.png", alt=man[1]["t"])

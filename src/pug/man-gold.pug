@@ -1,0 +1,22 @@
+extends regular
+block seo
+  title= man[3]["t"]
+  +desc(man[3]["desc"])
+  meta(property='og:title', content=man[3]["t"])
+  meta(property='og:description', content=man[3]["desc"])
+  meta(property='og:image', content=siteRoot + 'i/450/'+ man[3]["img"])
+  meta(property='og:url', content=siteRoot + man[3]["a"] + '.html')
+block inside
+  p
+    a(href="./"+ link4 + ".html").rank= man[3]["cat"]
+  h1(itemprop="name")= man[3]["t"]
+  p.text-center
+    img(itemprop="image",src="./i/"+ man[3]["img"], alt=man[3]["t"])
+  p(itemprop="description") Роскошный и соблазнительный, словно его обладатель, этот аромат надолго останется в памяти. Контрастное сочетание сладких и пронзительных нот интригует, завлекая в водоворот чувств. Роза, ваниль и шафран стремятся навстречу мужественному аккорду ладана и кардамона. На память о себе этот аромат оставляет горчинку грейпфрута и ветивера, приправленную сладкими эфирными маслами.
+  h2.text-center СЕМЕЙСТВО АРОМАТОВ: ОРИЕНТАЛЬНЫЕ.
+  p
+    ul.rain
+      each title in ['Начальные ноты: бергамот, грейпфрут, кардамон, корица, смола Элеми.','Ноты «сердца»: роза, фимиам, шафран.','Конечные ноты: сладкое масло, ветивер, янтарь, лабданум.']
+        li= title
+  p.text-center
+    img(src="./i/gold.png", alt=man[3]["t"])

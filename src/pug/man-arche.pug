@@ -1,0 +1,23 @@
+extends regular
+block seo
+  title= man[2]["t"]
+  +desc(man[2]["desc"])
+  meta(property='og:title', content=man[2]["t"])
+  meta(property='og:description', content=man[2]["desc"])
+  meta(property='og:image', content=siteRoot + 'i/450/'+ man[2]["img"])
+  meta(property='og:url', content=siteRoot + man[2]["a"] + '.html')
+block inside
+  p
+    a(href="./"+ link4 + ".html").rank= man[2]["cat"]
+  h1(itemprop="name")= man[2]["t"]
+  p.text-center
+    img(itemprop="image",src="./i/"+ man[2]["img"], alt=man[2]["t"])
+  p(itemprop="description") Arche - это аромат решительного мужчины. Это мечтательный взгляд, обращенный к звездному небу, сон о далеких путешествиях в страны, где песок жарче солнца. Arche - это неразгаданные тайны и мечты, это тепло и гармония души.
+  p Интригующие ноты боярышника и герани, появляющиеся после исчезновения первоначальной свежести лимона и арбуза, медленно переходят в теплые оттенки сандалового дерева, янтаря и ванили. Захватывающие впечатления, заключенные в элегантный флакон духов, загадочность и непреодолимое желание. Мужественность в объятиях Вселенной – это Arche.
+  h2.text-center СЕМЕЙСТВО АРОМАТОВ: ДРЕВЕСНО-ЦИТРУСОВЫЕ.
+  p
+    ul.rain
+      each title in ['Начальные ноты: бергамот, арбуз, лимон.','Ноты «сердца»: боярышник, герань, цветы апельсина, белый перец.','Конечные ноты: кедр, сандаловое дерево, янтарь, ваниль.']
+        li= title
+  p.text-center
+    img(src="./i/arche.png", alt=man[2]["t"])
