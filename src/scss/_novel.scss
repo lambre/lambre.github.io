@@ -9,7 +9,13 @@
         }
     }
 
+    .rank {
+        position: relative;
+        bottom: rem-calc(-2);
+    }
+
     &__img {
+        height: rem-calc(277);
         margin-bottom: rem-calc(10);
         background: #fff;
         box-shadow: 0 0 30px #585858;
@@ -19,5 +25,10 @@
         font-size: rem-calc(21);
         font-weight: 600;
         color: #000;
+    }
+    @include breakpoint(small only) {
+        &__img {
+            height: auto;
+        }
     }
 }

@@ -1,0 +1,20 @@
+extends regular
+block seo
+  title= woman[4]["t"]
+  +desc(woman[4]["desc"])
+  meta(property='og:title', content=woman[4]["t"])
+  meta(property='og:description', content=woman[4]["desc"])
+  meta(property='og:image', content=siteRoot + 'i/450/'+ woman[4]["img"])
+  meta(property='og:url', content=siteRoot + woman[4]["a"] + '.html')
+block inside
+  p
+    a(href="./"+ link5 + ".html").rank= woman[4]["cat"]
+  h1(itemprop="name")= woman[4]["t"]
+  p.text-center
+    img(itemprop="image",src="./i/"+ woman[4]["img"], alt=woman[4]["t"])
+  p(itemprop="description") Всепоглощающая тайна любви и обольщения, заключенная во флаконе  аромата GOLD AMBER WOMEN, вырвавшись наружу, зазвучит страстной и чувственной мелодией. Глубокие ноты дуба и пачули задают уверенный аккорд этой композиции. Богатство янтаря раскрывается под аккомпанемент благоухающей мирры, согретой теплом мягкого воска, слегка опьяненной дорогим виски. Один вдох – и этот аромат становится одержимостью, перед которой невозможно устоять.
+  h2.text-center СЕМЕЙСТВО АРОМАТОВ: ОРИЕНТАЛЬНЫЕ.
+  p
+    ul.rain
+      each title in ['Начальная нота: гальбанум, камфорный базилик, виски, ром, лимон.','Нота «сердца»: пчелиный воск, роза, фимиам.','Конечная нота: бальзамическая смола, янтарь, ладанник, мирра, пачули,дуб.']
+        li= title

@@ -1,0 +1,20 @@
+extends regular
+block seo
+  title= woman[2]["t"]
+  +desc(woman[2]["desc"])
+  meta(property='og:title', content=woman[2]["t"])
+  meta(property='og:description', content=woman[2]["desc"])
+  meta(property='og:image', content=siteRoot + 'i/450/'+ woman[2]["img"])
+  meta(property='og:url', content=siteRoot + woman[2]["a"] + '.html')
+block inside
+  p
+    a(href="./"+ link5 + ".html").rank= woman[2]["cat"]
+  h1(itemprop="name")= woman[2]["t"]
+  p.text-center
+    img(itemprop="image",src="./i/"+ woman[2]["img"], alt=woman[2]["t"])
+  p(itemprop="description") Amaltea - это мифическая нимфа, а также название одного из спутников Юпитера. Аромат Amaltea - это уникальное сочетание нежности и таинственности Bселенной. Раскрываясь вначале свежими неуловимыми нотами, аромат, словно сказочный сон о лимонных деревьях, унесет Вас на луга, усеянные розами и ландышами. Ароматическая композиция создана с мечтой о решительных, загадочных и необыкновенных женщинах.
+  h2.text-center СЕМЕЙСТВО АРОМАТОВ: ЦВЕТОЧНО-ОРИЕНТАЛЬНЫЕ.
+  p
+    ul.rain
+      each title in ['Начальные ноты: лимон, грейпфрут, черная смородина.','Ноты «сердца»: инжир, роза, ландыш.','Конечные ноты: сандаловое дерево, мускус, мускатный орех.']
+        li= title

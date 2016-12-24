@@ -1,0 +1,11 @@
+mixin news(obj,category)
+  .columns
+    .novel
+      if category==true
+        div
+          span.rank= obj["cat"]
+      a(href="./"+ obj["a"] + '.html')
+        .novel__img.text-center
+          img(src="./i/450/"+ obj["img"], alt=obj["t"])
+        .novel__info.text-center
+          p.novel__title= obj["t"]

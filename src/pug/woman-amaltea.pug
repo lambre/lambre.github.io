@@ -1,0 +1,20 @@
+extends regular
+block seo
+  title= woman[0]["t"]
+  +desc(woman[0]["desc"])
+  meta(property='og:title', content=woman[0]["t"])
+  meta(property='og:description', content=woman[0]["desc"])
+  meta(property='og:image', content=siteRoot + 'i/450/'+ woman[0]["img"])
+  meta(property='og:url', content=siteRoot + woman[0]["a"] + '.html')
+block inside
+  p
+    a(href="./"+ link5 + ".html").rank= woman[0]["cat"]
+  h1(itemprop="name")= woman[0]["t"]
+  p.text-center
+    img(itemprop="image",src="./i/"+ woman[0]["img"], alt=woman[0]["t"])
+  p(itemprop="description") Ее очарование – это дуновение бриза из цитрусового сада, расположенного на морском побережье, в котором свежие ноты лимона и грейпфрута скромно переплетаются с оттенками бергамота, заигрывают со зреющими в лучах южного солнца сочными персиками для того, чтобы в сумерках спрятаться в прохладную тень сандалового дерева. Теплота ванили и смелость мускуса звучат, как метафора, представляющая собой летнюю прогулку в лучах заходящего солнца с обольстительной женщиной, загадочная улыбка которой скрывает за собой множество тайн.
+  h2.text-center СЕМЕЙСТВО АРОМАТОВ: ЦВЕТОЧНО-ОРИЕНТАЛЬНЫЕ.
+  p
+    ul.rain
+      each title in ['Начальные ноты: лимон, грейпфрут, арбуз, бергамот.','Ноты «сердца»: персик, роза, шиповник.','Конечные ноты: сандаловое дерево, ваниль, мускатный орех, мускус.']
+        li= title

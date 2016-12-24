@@ -1,0 +1,36 @@
+extends regular
+block seo
+  title= woman[6]["t"]
+  +desc(woman[6]["desc"])
+  meta(property='og:title', content=woman[6]["t"])
+  meta(property='og:description', content=woman[6]["desc"])
+  meta(property='og:image', content=siteRoot + 'i/450/'+ woman[6]["img"])
+  meta(property='og:url', content=siteRoot + woman[6]["a"] + '.html')
+block inside
+  p
+    a(href="./"+ link5 + ".html").rank= woman[6]["cat"]
+  h1(itemprop="name")= woman[6]["t"]
+  p.text-center
+    img(itemprop="image",src="./i/"+ woman[6]["img"], alt=woman[6]["t"])
+  p(itemprop="description") Изумительные «разноцветные» ароматы, отвечающие за различные оттенки настроения. 5 флаконов по 8 мл упакованы в изящную картонную упаковку с прозрачным окошком. Émotions de Lambre – воздействуют на Ваши чувства, волнуют воображение, вызывают волшебные эмоции.
+  p Набор: 5 x 8 мл
+  p Набор духов Émotions de Lambre, состоящий из 5 неповторимых ароматов, для создания у Вас великолепного настроения.
+  p Каждый из флаконов духов имеет собственный цветовой отенок:
+  p
+    ol
+      each title in ['Роскошь – желтый','Любовь – красный','Успокоение – прозрачный','Эйфория – фиолетовый','Надежда – зеленый']
+        li= title
+  p.text-center
+    img(src="./i/01.jpg", alt=woman[6]["t"])
+  p.text-center
+    img(src="./i/99.jpg", alt=woman[6]["t"])
+  p.text-center
+    img(src="./i/166.png", alt=woman[6]["t"])
+  p.text-center
+    img(src="./i/167.png", alt=woman[6]["t"])
+  p.text-center
+    img(src="./i/168.png", alt=woman[6]["t"])
+  p.text-center
+    img(src="./i/172.png", alt=woman[6]["t"])
+  p.text-center
+    img(src="./i/173.png", alt=woman[6]["t"])
