@@ -1,22 +1,23 @@
 mixin news(obj,category)
-  .columns
-    .novel
-      if category==true
-        div
-          case obj["cat"]
-            when c2
-              a(href="./"+ link2 + ".html").rank= obj["cat"]
-            when c3
-              a(href="./"+ link3 + ".html").rank= obj["cat"]
-            when c4
-              a(href="./"+ link4 + ".html").rank= obj["cat"]
-            when c5
-              a(href="./"+ link5 + ".html").rank= obj["cat"]
-            default
-              a(href="./"+ link1 + ".html").rank= obj["cat"]
+  if obj["a"]
+    .columns
+      .novel
+        if category==true
+          div
+            case obj["cat"]
+              when c2
+                a(href="./"+ link2 + ".html").rank= obj["cat"]
+              when c3
+                a(href="./"+ link3 + ".html").rank= obj["cat"]
+              when c4
+                a(href="./"+ link4 + ".html").rank= obj["cat"]
+              when c5
+                a(href="./"+ link5 + ".html").rank= obj["cat"]
+              default
+                a(href="./"+ link1 + ".html").rank= obj["cat"]
 
-      a(href="./"+ obj["a"] + '.html')
-        .novel__img.text-center
-          img(src="./i/450/"+ obj["img"], alt=obj["t"])
-        .novel__info.text-center
-          p.novel__title= obj["t"]
+        a(href="./"+ obj["a"] + '.html')
+          .novel__img.text-center
+            img(src="./i/450/"+ obj["img"], alt=obj["t"])
+          .novel__info.text-center
+            p.novel__title= obj["t"]

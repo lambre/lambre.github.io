@@ -1,0 +1,24 @@
+extends regular
+block seo
+  -var num = 4;
+  title= careskin[num]["t"]
+  +desc(careskin[num]["desc"])
+  meta(property='og:title', content=careskin[num]["t"])
+  meta(property='og:description', content=careskin[num]["desc"])
+  meta(property='og:image', content=siteRoot + 'i/450/'+ careskin[num]["img"])
+  meta(property='og:url', content=siteRoot + careskin[num]["a"] + '.html')
+block inside
+  p
+    a(href="./"+ link5 + ".html").rank= careskin[num]["cat"]
+  h1(itemprop="name")= careskin[num]["t"]
+  p.text-center
+    img(itemprop="image",src="./i/"+ careskin[num]["img"], alt=careskin[num]["t"])
+  p
+    ol
+      each title in ['Осветляющий тональный крем.','Мгновенное осветление кожи лица.','Ровный тон .','Увлажнённая и сияющая кожа.']
+        li= title
+  h2.text-center MAKE UP BRILLANCE:
+  p
+    ul.rain
+      each title in ['содержит активный увлажняющий комплекс ','легко наносится ','не создаёт эффекта маски ','доступен в 3 тонах ']
+        li= title

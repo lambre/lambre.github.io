@@ -1,0 +1,31 @@
+extends regular
+block seo
+  -var num = 5;
+  title= careskin[num]["t"]
+  +desc(careskin[num]["desc"])
+  meta(property='og:title', content=careskin[num]["t"])
+  meta(property='og:description', content=careskin[num]["desc"])
+  meta(property='og:image', content=siteRoot + 'i/450/'+ careskin[num]["img"])
+  meta(property='og:url', content=siteRoot + careskin[num]["a"] + '.html')
+block inside
+  p
+    a(href="./"+ link5 + ".html").rank= careskin[num]["cat"]
+  h1(itemprop="name")= careskin[num]["t"]
+  p.text-center
+    img(itemprop="image",src="./i/"+ careskin[num]["img"], alt=careskin[num]["t"])
+  p(itemprop="description") АКТИВНО ВОССТАНАВЛИВАЮЩАЯ СЫВОРОТКА СО СЛИЗЬЮ УЛИТОК
+  p Сыворотка LAMBRE HELIX CURATIO предназначена для любого типа кожи: с признаками старения, для кожи, требующей питания и восстановления, сухой, обезвоженной, уставшей и с пигментными пятнами. Сыворотка не вызывает раздражения, подходит также для чувствительных типов кожи.
+  h2.text-center РЕЗУЛЬТАТ ДЕЙСТВИЯ СЫВОРОТКИ SERUM HELIX CURATIO:
+  p
+    ul.rain
+      each title in ['интенсивно регенерирует и питает кожу;','замедляет процессы старения;','глубоко увлажняет и разглаживает кожу;','уменьшает покраснения и мелкие шрамы.']
+        li= title
+  h2.text-center LAMBRE HELIX CURATIO — ЭФФЕКТИВНАЯ БОРЬБА С НЕСОВЕРШЕНСТВАМИ КОЖИ.
+  h2.text-center VIPERA CURATIO – LIFTING EFFECT
+  p ИНТЕНСИВНАЯ ЛИФТИНГ-СЫВОРОТКА С СИНТЕТИЧЕСКИМ ЯДОМ ГАДЮКИ SYN- AKE® Революционная сыворотка SYN-AKE – это синтетический нейропептид, свойства и действие которого аналогичны действию и свойствам пептида Ваглерин-1, который находится в яде змеи. Его действие заключается в расслаблении и снятии нервно-мышечных спазмов, благодаря чему он эффективно разглаживает существующие морщины и предотвращает появление новых.
+  h2.text-center РЕЗУЛЬТАТЫ
+  p
+    ol
+      each title in ['Мгновенный эффект "лифтинга" — гладкая и подтянутая кожа;','Уменьшение мимических морщин и борозд;','Повышение эластичности и упругости кожи;']
+        li= title
+  h2.text-center LAMBRE VIPERA CURATIO — СИЛА ЯДА ЗМЕИ В БОРЬБЕ С МОРЩИНАМИ

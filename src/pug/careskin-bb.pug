@@ -1,0 +1,24 @@
+extends regular
+block seo
+  -var num = 3;
+  title= careskin[num]["t"]
+  +desc(careskin[num]["desc"])
+  meta(property='og:title', content=careskin[num]["t"])
+  meta(property='og:description', content=careskin[num]["desc"])
+  meta(property='og:image', content=siteRoot + 'i/450/'+ careskin[num]["img"])
+  meta(property='og:url', content=siteRoot + careskin[num]["a"] + '.html')
+block inside
+  p
+    a(href="./"+ link5 + ".html").rank= careskin[num]["cat"]
+  h1(itemprop="name")= careskin[num]["t"]
+  p.text-center
+    img(itemprop="image",src="./i/"+ careskin[num]["img"], alt=careskin[num]["t"])
+  p(itemprop="description") BB Cream –многофункциональное косметическое средство, которое заменит половину вашей косметичк. BB Cream сочетает  в себе крем для лица и тональный крем.
+  h2.text-center LAMBRE Beaty Balm Cream:
+  p
+    ul.rain
+      each title in ['выравнивает цвет лица','маскирует покраснения и несовершенства','интенсивно увлажняет','разглаживает и осветляет','устраняет признаки усталости']
+        li= title
+  h2.text-center LAMBRE BB Cream доступен в 2 оттенках:
+  p Nr 1 –light
+  p Nr 2 – medium 
