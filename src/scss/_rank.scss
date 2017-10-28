@@ -1,9 +1,68 @@
 .rank {
-    border-bottom: rem-calc(2) solid $red;
-    text-transform: uppercase;
-    font-size: rem-calc(11);
-    &:hover {
-      border-bottom-color: $secondary-color;
+  min-width: rem-calc(105);
+  height: rem-calc(33);
+  text-align: center;
+  font-size: rem-calc(10);
+  font-weight: 700;
+  display: inline-block;
+  position: absolute;
+  padding-left: rem-calc(10);
+  padding-right: rem-calc(10);
+  text-transform: uppercase;
+  color: $white;
+  padding-top: rem-calc(0);
+  padding-bottom: rem-calc(0);
+  line-height: rem-calc(33);
+  background: $success-color;
+  top: rem-calc(-20);
+  right: rem-calc(-3);
+  transition: background-color 0.25s ease-out,color 0.25s ease-out;
+  margin-right: rem-calc(5);
+  @keyframes slideme {
+    0% {
+      left: 0;
+      opacity: 1;
+      margin-left: rem-calc(0);
     }
-    
+
+    100% {
+      opacity: 0;
+      left: 100%;
+      margin-left: rem-calc(-5);
+    }
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    right: rem-calc(-5);
+    top: rem-calc(0);
+    width: rem-calc(6);
+    height: rem-calc(36);
+    background: url($imagesPath +"/label-green.svg")no-repeat center;
+    background-size: 100% 100%;
+  }
+
+  &:after {
+    margin-left: 0;
+    content: " ";
+    width: rem-calc(6);
+    height: rem-calc(33);
+    background: #fff;
+    animation-delay: 0.005s;
+    position: absolute;
+    left: -45px;
+    top: 0;
+    animation-timing-function: ease;
+    transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+    -o-transition: all 0.1s;
+    -khtml-transition: all 0.1s;
+    -ms-transition: all 0.1s;
+    animation-name: slideme;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    transform: skewX(-45deg);
+  }
 }
