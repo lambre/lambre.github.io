@@ -30,7 +30,8 @@
     transition: 0.3s;
     font-size: rem-calc(21);
     font-weight: 600;
-    color: #000;
+    color: #fff;
+    text-shadow: rem-calc(0 0 25) #000;
   }
   @include breakpoint(small only) {
     &__img {

@@ -7,8 +7,11 @@ a {
   transition: color 300ms ease-in-out;
 }
 body {
-    background: #f2f2f2;
+
     overflow-x: hidden;
+    background: url($imagesPath +"/back-main.jpg")no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .responsive-embed {
