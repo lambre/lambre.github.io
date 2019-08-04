@@ -91,6 +91,15 @@ let pug = () => gulp.src(paths.src.html)
 
 let images = () => gulp.src(paths.src.images, {allowEmpty: true})
     .pipe(gulpNewer(paths.dist.images))
+   
+    .pipe(gulp.dest(paths.dist.images))
+    .pipe(gulpWait(100))
+    .pipe(gulpBrowserSync.reload({
+        stream: true
+    }));
+    
+    let imagesMinify = () => gulp.src(paths.src.images, {allowEmpty: true})
+    .pipe(gulpNewer(paths.dist.images))
     .pipe(gulpImagemin({
         progressive: true,
         svgoPlugins: [{removeViewBox: false}],
@@ -166,6 +175,6 @@ gulp.task('default',
 gulp.task('minify',
     gulp.series(
         clean,
-        gulp.parallel(sass, pug, images, i, fonts, jsLib, jsAppMinify)
+        gulp.parallel(sass, pug, imagesMinify, i, fonts, jsLib, jsAppMinify)
     )
 );
